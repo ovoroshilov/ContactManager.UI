@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="my-3">
+        <app-upload-csv></app-upload-csv>
+    </div>
+    <ng-container *ngIf="users">
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                        <span>
+                            <span>
+                                <button type="button" (click)="sortByName()" class="btn btn-light">
+                                    <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                        </span>
+                    </th>
+                    <th>
+                        Date of birth
+                        <span>
+                            <span>
+                                <button type="button" (click)="sortByDateOfBirth()" class="btn btn-light">
+                                    <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                        </span>
+                    </th>
+                    <th>
+                        Married
+                        <span>
+                            <span>
+                                <button type="button" (click)="sortByMarried()" class="btn btn-light">
+                                    <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                        </span>
+                    </th>
+                    <th>
+                        Phone
+                        <span>
+                            <span>
+                                <button type="button" (click)="sortByPhone()" class="btn btn-light">
+                                    <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                        </span>
+                    </th>
+                    <th>
+                        Salary
+                        <span>
+                            <span>
+                                <button type="button" (click)="sortBySalary()" class="btn btn-light">
+                                    <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.dateOfBirth}}</td>
+                    <td>{{user.married}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.salary}}</td>
+                    <td>
+                        <div class="mx-auto">
+                            <button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+</div>

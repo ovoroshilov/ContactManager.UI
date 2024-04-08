@@ -1,0 +1,12 @@
+<div class="container bg-light">
+    <h5>Upload CSV</h5>
+    <form #form="ngForm" (ngSubmit)="uploadCSV()">
+      <div class="mt-3">
+        <input type="file" accept=".csv" class="form-control" (change)="onCSVUploadChange($event)" name="csvFile">
+      </div>
+      <div class="mt-3">
+        <button type="submit" class="btn btn-dark">Upload</button>
+        <p>Users were added: {{usersCountAdded}}</p>
+      </div>
+    </form>
+  </div>
