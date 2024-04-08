@@ -10,8 +10,13 @@
                         Name
                         <span>
                             <span>
-                                <button type="button" (click)="sortByName()" class="btn btn-light">
+                                <button type="button" (click)="sortBy('name')" class="btn btn-light">
                                     <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                            <span>
+                                <button type="button" (click)="sortBy('name', true)" class="btn btn-light">
+                                    <i class="bi bi-arrow-down"></i>
                                 </button>
                             </span>
                         </span>
@@ -20,8 +25,13 @@
                         Date of birth
                         <span>
                             <span>
-                                <button type="button" (click)="sortByDateOfBirth()" class="btn btn-light">
+                                <button type="button" (click)="sortBy('dateOfBirth')" class="btn btn-light">
                                     <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                            <span>
+                                <button type="button" (click)="sortBy('dateOfBirth', true)" class="btn btn-light">
+                                    <i class="bi bi-arrow-down"></i>
                                 </button>
                             </span>
                         </span>
@@ -30,8 +40,13 @@
                         Married
                         <span>
                             <span>
-                                <button type="button" (click)="sortByMarried()" class="btn btn-light">
+                                <button type="button" (click)="sortBy('married')" class="btn btn-light">
                                     <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                            <span>
+                                <button type="button" (click)="sortBy('married', true)" class="btn btn-light">
+                                    <i class="bi bi-arrow-down"></i>
                                 </button>
                             </span>
                         </span>
@@ -40,8 +55,13 @@
                         Phone
                         <span>
                             <span>
-                                <button type="button" (click)="sortByPhone()" class="btn btn-light">
+                                <button type="button" (click)="sortBy('phone')" class="btn btn-light">
                                     <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                            <span>
+                                <button type="button" (click)="sortBy('phone', true)" class="btn btn-light">
+                                    <i class="bi bi-arrow-down"></i>
                                 </button>
                             </span>
                         </span>
@@ -50,8 +70,13 @@
                         Salary
                         <span>
                             <span>
-                                <button type="button" (click)="sortBySalary()" class="btn btn-light">
+                                <button type="button" (click)="sortBy('salary')" class="btn btn-light">
                                     <i class="bi bi-arrow-up"></i>
+                                </button>
+                            </span>
+                            <span>
+                                <button type="button" (click)="sortBy('salary', true)" class="btn btn-light">
+                                    <i class="bi bi-arrow-down"></i>
                                 </button>
                             </span>
                         </span>

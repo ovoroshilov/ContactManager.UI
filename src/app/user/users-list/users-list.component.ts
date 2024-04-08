@@ -40,23 +40,24 @@ export class UsersListComponent implements OnInit {
     })
   }
 
-  sortByName() {
-    this.users?.sort((a, b) => a.name.localeCompare(b.name));
-  }
-
-  sortByDateOfBirth() {
-    this.users?.sort((a, b) => new Date(a.dateOfBirth).getTime() - new Date(b.dateOfBirth).getTime());
-  }
-
-  sortByMarried() {
-    this.users?.sort((a, b) => a.married === b.married ? 0 : a.married ? 1 : -1);
-  }
-
-  sortByPhone(){
-    this.users?.sort((a, b) => a.phone.localeCompare(b.phone));
-  }
-
-  sortBySalary(){
-    this.users?.sort((a, b) => parseInt(a.salary) - parseInt(b.salary));
+  sortBy(property: string, descending: boolean = false) {
+    const multiplier = descending ? -1 : 1;
+    switch (property) {
+      case 'name':
+        this.users?.sort((a, b) => multiplier * a.name.localeCompare(b.name));
+        break;
+      case 'dateOfBirth':
+        this.users?.sort((a, b) => multiplier * (new Date(a.dateOfBirth).getTime() - new Date(b.dateOfBirth).getTime()));
+        break;
+      case 'married':
+        this.users?.sort((a, b) => multiplier * (a.married === b.married ? 0 : a.married ? 1 : -1));
+        break;
+      case 'phone':
+        this.users?.sort((a, b) => multiplier * a.phone.localeCompare(b.phone));
+        break;
+      case 'salary':
+        this.users?.sort((a, b) => multiplier * (parseInt(a.salary) - parseInt(b.salary)));
+        break;
+    }
   }
 }
