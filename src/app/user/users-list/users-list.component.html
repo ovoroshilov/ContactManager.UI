@@ -86,7 +86,7 @@
             <tbody>
                 <tr *ngFor="let user of users">
                     <td>{{user.name}}</td>
-                    <td>{{user.dateOfBirth}}</td>
+                    <td>{{user.dateOfBirth | date}}</td>
                     <td>{{user.married}}</td>
                     <td>{{user.phone}}</td>
                     <td>{{user.salary}}</td>
